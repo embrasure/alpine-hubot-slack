@@ -1,0 +1,7 @@
+command:
+  node -v:
+    exit-status: 0
+    stdout: []
+    stderr:
+    - v6.2.2
+    timeout: 10000
