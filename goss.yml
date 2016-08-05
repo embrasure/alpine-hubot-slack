@@ -3,5 +3,5 @@ command:
     exit-status: 0
     stdout: []
     stderr:
-    - v6.2.2
+    - v6.3.0
     timeout: 10000
