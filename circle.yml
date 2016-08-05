@@ -5,15 +5,15 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t embrasure/hubot .
+    - docker build -t embrasure/alpine-hubot-slack .
     - mkdir goss
     - cp goss.yml ./goss
 test:
   override:
-    - docker run -it --rm -v $(pwd)/goss:/tmp/goss embrasure/hubot goss -g /tmp/goss/goss.yml validate --format junit
+    - docker run -it --rm -v $(pwd)/goss:/tmp/goss embrasure/alpine-hubot-slack goss -g /tmp/goss/goss.yml validate # There is a bug here. --format junit >> $CIRCLE_TEST_REPORTS/report.xml
 deployment:
   hub:
     branch: master
     commands:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push embrasure/hubot
+      - docker push embrasure/alpine-hubot-slack
