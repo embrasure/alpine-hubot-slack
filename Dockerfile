@@ -6,7 +6,7 @@ RUN apk update && \
     apk add bash curl && \
     rm -rf /tmp/* /var/cache/apk/*
 
-RUN curl -L https://github.com/aelsabbahy/goss/releases/download/v0.2.1/goss-linux-amd64 > /usr/local/bin/goss && chmod +rx /usr/local/bin/goss
+RUN curl -L https://github.com/aelsabbahy/goss/releases/download/v0.2.3/goss-linux-amd64 > /usr/local/bin/goss && chmod +rx /usr/local/bin/goss
 
 RUN mkdir /tmp/goss
 
