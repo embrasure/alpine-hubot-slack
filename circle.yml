@@ -10,7 +10,7 @@ dependencies:
     - cp goss.yml ./goss
 test:
   override:
-    - docker run -it --rm -v $(pwd)/goss:/tmp/goss embrasure/alpine-hubot-slack goss -g /tmp/goss/goss.yml validate # There is a bug here. --format junit >> $CIRCLE_TEST_REPORTS/report.xml
+    - docker run -it --rm -v $(pwd)/goss:/tmp/goss embrasure/alpine-hubot-slack goss -g /tmp/goss/goss.yml validate --format junit >> $CIRCLE_TEST_REPORTS/report.xml
 deployment:
   hub:
     branch: master

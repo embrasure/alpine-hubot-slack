@@ -1,12 +1,6 @@
 # embrasure/alpine-hubot-slack
 
-master: [![CircleCI](https://circleci.com/gh/embrasure/alpine-hubot-slack/tree/master.svg?style=svg)](https://circleci.com/gh/alpine-hubot-slack/cleanroom/tree/master) 
-
-development: [![CircleCI](https://circleci.com/gh/embrasure/alpine-hubot-slack/tree/development.svg?style=svg)](https://circleci.com/gh/alpine-hubot-slack/cleanroom/tree/development)
-
-[![](https://imagelayers.io/badge/embrasure/alpine-hubot-slack:latest.svg)](https://imagelayers.io/?images=alpine-hubot-slack/cleanroom:latest 'Get your own badge on imagelayers.io') 
-
-[![license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)]()
+[![CircleCI](https://circleci.com/gh/embrasure/alpine-hubot-slack/tree/master.svg?style=svg)](https://circleci.com/gh/alpine-hubot-slack/cleanroom/tree/master) [![](https://imagelayers.io/badge/embrasure/alpine-hubot-slack:latest.svg)](https://imagelayers.io/?images=alpine-hubot-slack/cleanroom:latest 'Get your own badge on imagelayers.io') [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)]()
 
 ## About alpine-hubot-slack
 
