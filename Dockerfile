@@ -1,4 +1,4 @@
-FROM mhart/alpine-node
+FROM mhart/alpine-node:4.6.0
 
 MAINTAINER Luke Sigler <lukesigler@outlook.com>
 
@@ -10,7 +10,7 @@ RUN curl -L https://github.com/aelsabbahy/goss/releases/download/v0.2.3/goss-lin
 
 RUN mkdir /tmp/goss
 
-RUN npm install -g coffee-script yo generator-hubot && adduser hubot -S
+RUN npm install -g hubot coffee-script yo generator-hubot && npm cache clear && adduser hubot -S
 
 USER hubot
 
@@ -20,6 +20,9 @@ ENV DEV=false HUBOT_LOG_LEVEL=debug BOT_NAME=hugh BOT_OWNER=hugh@example.org BOT
 
 RUN yo hubot --owner="$BOT_OWNER" --name="$BOT_NAME" --description="$BOT_DESC" --defaults && npm install hubot-slack
 
+VOLUME ["/home/hubot/scripts"]
+
 CMD node -e "console.log(JSON.stringify('$EXTERNAL_SCRIPTS'.split(',')))" > external-scripts.json && \
-	npm install $(node -e "console.log('$EXTERNAL_SCRIPTS'.split(',').join(' '))")  && \ 
-    bin/hubot -n $BOT_NAME -a slack
+npm install $(node -e "console.log('$EXTERNAL_SCRIPTS'.split(',').join(' '))") && \
+bin/hubot -n $HUBOT_NAME --adapter slack
+

@@ -2,6 +2,6 @@ command:
   node -v:
     exit-status: 0
     stdout:
-    - v6.8.1
+    - v4.6.0
     stderr: []
     timeout: 10000
