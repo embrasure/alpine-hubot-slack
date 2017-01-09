@@ -16,7 +16,7 @@ A minimal hubot with a slack adapter running in alpine.
 
 `DEV` Default "false". 
 
-`LOG_LEVEL` Default "debug". Sets the hubot's log level.
+`HUBOT_LOG_LEVEL` Default "debug". Sets the hubot's log level.
 
 `BOT_NAME` Default "hugh". Sets the hubot's name.
 

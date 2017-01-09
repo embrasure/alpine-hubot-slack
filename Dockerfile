@@ -16,7 +16,7 @@ USER hubot
 
 WORKDIR /home/hubot
 
-ENV DEV=false HUBOT_LOG_LEVEL=debug BOT_NAME=hugh BOT_OWNER=hugh@example.org BOT_DESC="A hubot to love." HUBOT_SLACK_TOKEN=default EXTERNAL_SCRIPTS=hubot-diagnostics,hubot-help,hubot-rules
+ENV DEV=false BOT_NAME=hugh BOT_OWNER=hugh@example.org BOT_DESC="A hubot to love." HUBOT_SLACK_TOKEN=default EXTERNAL_SCRIPTS=hubot-diagnostics,hubot-help,hubot-rules
 
 RUN yo hubot --owner="$BOT_OWNER" --name="$BOT_NAME" --description="$BOT_DESC" --defaults && npm install hubot-slack
 
